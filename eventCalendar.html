@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="keywords" /><title>
+
+    <link rel="stylesheet" href="css/eventCalendar.css" /><link rel="stylesheet" href="css/eventCalendar_theme_responsive.css" />
+  
+   
+</head>
+<body>
+
+<div class="col-sm-6 col-md-3 clearfix-xs xs-padding0">
+                        <h4 class="Minibox-title" style="background: #BF8D2C;">
+                            Event Calendar</h4>
+                        <div class="calendar-part mb15">
+                            <section class="events">
+            <div class="section-content">
+              <div id="mycalendars"></div>
+            </div>
+
+<script>
+        $(document).ready(function () {
+            $("#mycalendars").eventCalendar({
+                eventsjson: 'json/locale.es.php',
+                jsonDateFormat: 'human', // 'YYYY-MM-DD HH:MM:SS'
+                eventsScrollable: true
+            });
+        });
+    </script><script src="js/jquery.eventCalendar.js" type="text/javascript"></script></body>
+</html>

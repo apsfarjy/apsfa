@@ -1,0 +1,1316 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" style="height: 100%;"><head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>AP State Forest Academy</title>
+
+		<!-- Bootstrap -->
+
+<!-- Latest compiled and minified CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/apsfa.css" rel="stylesheet">
+<script src="js/md5.js" type="text/javascript"></script>	
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="css/amCharts/export.css" type="text/css" media="all" />
+<style type="text/css">
+
+/*social icons */
+.fa {
+  padding: 5px;
+  font-size: 25px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+</style>
+
+		
+
+<style type="text/css">
+thover{
+  position:fixed;
+  background:#000;
+  width:100%;
+  height:100%;
+  opacity: .6
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+    /* border: 1px solid rgb(48, 121, 237); */
+    border: 0px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    background-color: rgb(255, 167, 4);
+    padding: 17px 0px;
+    font-family: roboto;
+    font-size: 14px;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(77, 144, 254)), to(rgb(71, 135, 237))); */
+}
+.loginmodal-submit:hover {
+    border: 1px solid rgb(47, 91, 183);
+    border: 0px;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: #52464D;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(77, 144, 254)), to(rgb(53, 122, 232))); */
+}
+
+.loginmodal-container a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+    opacity: 1;
+    transition: opacity ease 0.5s;
+    font-size: 14px;
+} 
+
+.login-help{
+  font-size: 12px;
+}
+
+.login-btn {
+  text-align:center;
+  margin-top: 50px;
+}
+
+.button {
+  line-height: 55px;
+  padding: 0 30px;
+  background: #004a80;
+  color: #fff;
+  display: inline-block;
+  font-family: roboto;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.button:hover,
+.button:visited {
+  background: #006cba;
+  color: #fff;
+}
+#tpopup{
+  position:absolute;
+  width:800px;
+  height:800px;
+  background:#fff;
+  left:45.8%;
+  top:11.2%;
+  border-radius:5px;
+  padding:0px 0;
+  margin-left:-320px; /* width/2 + padding-left */
+  margin-top:-150px; /* height/2 + padding-top */
+  text-align:center;
+  box-shadow:0 0 10px 0 #000;
+ z-index: 99999;
+
+
+}
+#tclose{
+  position:absolute;
+  background:black;
+  color:white;  
+  right:15px;
+  top:55px;
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+  font-size:8px;
+  font-weight:bold;
+  font-family:'Arial Black', Arial, sans-serif;
+  cursor:pointer;
+  box-shadow:0 0 10px 0 #000;
+}
+
+#back, #back img{
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                z-index: -10;
+                top:0;
+                left: 0;
+            }
+.prc_question{
+background: rgb(122, 112, 117,0.9);
+
+}#e40b45
+
+
+.prc_question a{
+color	:#fff;
+padding: 0px 4px 4px 15px;
+text-decoration: none;
+
+}
+  
+  .prc_question h6{
+    margin-top: 9px;
+    font-size: 16px !important  ;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+}
+
+body{
+    
+background: ;
+}
+
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.profile-img{
+    text-align: center;
+}
+
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+
+.profile-img 
+.file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img 
+.file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+.profile-head h3{
+    color: #333;
+}
+
+.profile-head h6{
+    color: #0062cc;
+}
+
+.profile-edit-btn
+{
+    
+border: none;
+border-radius: 1.5rem;
+width: 70%;
+padding: 2%;
+font-weight: 600;
+color: #6c757d;
+cursor: pointer;
+
+}
+
+.proile-rating
+{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+
+.profile-work{
+    padding: 5%;
+    margin-top:-5%;
+}
+
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work 
+ul{
+    list-style: none;
+}
+
+.profile-tab 
+ label{
+    font-weight: 600;
+}
+
+.profile-tab 
+   p{
+    font-weight: 600;
+    color: #0062cc;
+}
+</style>
+
+
+
+<script type="text/javascript">
+
+function display()
+{
+    var f=document.forms["loginform"];
+    if(f.username.value=="")
+    {
+        alert("Please Enter UserID");
+        f.username.focus();
+        return false;
+    }
+    if(f.password.value=="")
+    {
+        alert("please Enter Password");
+        f.password.focus();
+        return false;
+    }
+//    f.username.value = f.username.value.toUpperCase();
+    f.password.value = hex_md5(f.password.value);
+    return true;
+}
+
+function alertUser()
+		{var text="You are leaving the APSFA and are subject to the privacy and security policies of the owners/sponsors of the outside website. APSFA, does not guarantee the availability of such linked pages at all times. APSFA cannot authorise the use of copyrighted materials contained in linked websites. Users are advised to request such authorisation from the owner of the linked website. APSFA, does not guarantee that linked websites comply with Indian Government Web Guidelines.";
+			if (!confirm(text))
+				return false;
+		}
+
+
+function goBack() {
+  window.history.go(-1);
+}
+
+</script>
+
+</head>
+
+<body>
+<div id="google_translate_element" style="display: none">
+			</div>
+			<script type="text/javascript">
+				function googleTranslateElementInit() {
+					new google.translate.TranslateElement({
+						pageLanguage: 'en', 
+						layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+						autoDisplay: false
+					}, 'google_translate_element');
+				}
+			</script>	
+
+  
+
+<div class="container back">
+<div class="header row">
+<div class="row mb10 mt10">
+<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7  clock"  >										
+<style="border-radius: 0px;
+	background: ;
+	color:White;
+	font-size:1em;
+    font-weight:bold;
+    text-align:center;
+    padding: 0px; 
+    width: 100%;;
+    height: 10px;">
+<script type="text/javascript">// <![CDATA[
+var d = new Date()
+                        var weekday = new Array("ఆదివారం", "సోమవారం", "మంగళవారం", "బుధవారం", "గురువారం", "శుక్రవారం", "శనివారం")
+                        var monthname = new Array("జనవరి", "ఫిబ్రవరి", "మార్చి", "ఏప్రిల్", "మే", "జూన్", "జూలై", "ఆగస్టు", "సెప్టెంబర్", "అక్టోబర్", "నవంబర్", "డిసెంబర్")
+                        document.write(weekday[d.getDay()] + ", ")
+                        document.write(d.getDate() + " ")
+                        document.write(monthname[d.getMonth()] + ", ")
+                        document.write(d.getFullYear())
+function renderTime() {
+                                var currentTime = new Date();
+                                var diem = "AM";
+                                var h = currentTime.getHours();
+                                var m = currentTime.getMinutes();
+                                var s = currentTime.getSeconds();
+                                setTimeout('renderTime()', 1000);
+                                if (h == 0) {
+                                    h = 12;
+                                } else if (h > 12) {
+                                    h = h - 12;
+                                    diem = "PM";
+                                }
+                                if (h < 10) {
+                                    h = "0" + h;
+                                }
+                                if (m < 10) {
+                                    m = "0" + m;
+                                }
+                                if (s < 10) {
+                                    s = "0" + s;
+                                }
+                                var myClock = document.getElementById('clockDisplay');
+                                myClock.textContent = "Now" + h + ":" + m + ":" + s + " " + diem;
+                                myClock.innerText = "APSFA Time: " + h + ":" + m + ":" + s + " " + diem;
+                            }
+                            renderTime();
+// ]]></script>
+
+<span id="clockDisplay">
+
+</div>	
+											 
+  <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 translate text-right ">
+<a href="https://www.apsfarjy.com/trainee-login">Registration</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.apsfarjy.com/contact-us"> Contact Us</a>
+								 </div></div></div>
+							
+
+					
+<div class="site-header">
+	 <div class="row">
+	 										
+<div class="col-md-8 col-sm-6 col-xs-12 center">
+	<h1><img  class="center" src="https://static.wixstatic.com/media/8e451e_b2b27527717946fab844c1e41fc9d619~mv2.png" width="100%" alt="APSFA-Title" class="img-responsive"/> </h1>
+                            </div>							
+					
+					</div></div>
+
+
+
+
+<div class="row mt10">
+<div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" style="padding:0px;">
+<header id="header">
+
+<nav class="navbar navbar-inverse navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>                        
+ </button>
+												  
+</div>
+												
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+<li><a href="Index.html">Home</a></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Administration<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="Board of Control.html">Board of Control</a></li>
+<li><a href="director.html">Director</a></li>
+<li><a href="Course Director.html">Course Directors</a></li>
+</ul>
+</li>							
+
+
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About us<span class="caret"></span></a><ul class="dropdown-menu">
+<li><a href="apsfa-logo.html">LOGO</a></li>
+<li><a href="academy-profile.html">Academy Profile</a></li>
+<li><a href="news-clips.html">News Clips</a></li>
+<li><a href="gallary.html">gallary</a></li>
+ </ul>
+</li>							
+
+<li><a href="vana-samrakshini.html"> News Letter</a></li>
+
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Acadamics<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="registration-form.html">Registration</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+<li><a href="faculty.html">Faculty</a></li>
+<li><a href="syllabus.html">Syllabus</a></li>
+<li><a href="gclassroom.html">Google Class</a></li>
+</ul>
+</li>				
+
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Facilities<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="hostel.html">Hostel</a></li>
+<li><a href="library.html">Library</a></li>
+<li><a href="computer-lab.html">Computer Lab</a></li>
+<li><a href="digital-library.html">Digital Library</a></li>
+<li><a href="gym.html">Gym</a></li>
+</ul>
+</li>	
+
+
+</div></div>
+
+</nav></div></div></div>
+
+</header><!--/#HEADER-->
+
+
+	
+	<div class="container">
+		 <div class="row message-box">
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 message-box-title  visible-md visible-lg" style="padding:0px;margin:0px;">
+						<span>LIVE UPADTES</span>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 " style="padding:0px;margin:0px;">
+						<div class="message-box-right"><marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"scrolldelay="100">
+
+<!-- <span class="blink" style="color:#fff;">
+<img src="https://www.apfinance.gov.in/images/new.gif" border="0"> &nbsp;All India National Forest Sports meet coaching camp from 23-12-2018 to 30-12-2018 at A.P.State Forest Academy, Rajamahendravaram </span> <a href ="https://drive.google.com/file/d/0B9NnnD6wKWXSODBQTk0tX25SWVo1aHRweFJ6b2UtZGl6ekFN/view" target="_blank" style="color:#ffc761;font-weight: bold;">LIST OF PARTICIPANTS</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;						
+						<!-- <a  href="#" style="color:#fff;">	&#3125;&#3143;&#3108;&#3112; &#3128;&#3125;&#3120;&#3107; 
+
+&#3128;&#3074;&#3096;&#3074; &#3093;&#3118;&#3136;&#3127;&#3112;&#3120;&#3149; &#3125;&#3134;&#3120;&#3135; &#3093;&#3134;&#3120;&#3149;&#3119;&#3134;&#3122;&#3119;&#3074; &#49;&#56;&#55; 
+
+&#3112;&#3134;&#3122;&#3149;&#3095;&#3125; &#3117;&#3125;&#3112;&#3074; &#3128;&#3098;&#3135;&#3125;&#3134;&#3122;&#3119;&#3074; &#3125;&#3142;&#3122;&#3095;&#3114;&#3138;&#3105;&#3135; 
+
+&#3077;&#3118;&#3120;&#3134;&#3125;&#3108;&#3135; &nbsp;<img src="images/new.gif" border="0"></a> -->
+						
+ <p><a href="https://drive.google.com/file/d/0B9NnnD6wKWXSODBQTk0tX25SWVo1aHRweFJ6b2UtZGl6ekFN/view" target="new" style="color: #fff">&nbsp;All India National Forest Sports meet coaching camp from 23-12-2018 to 30-12-2018 at A.P.State Forest Academy, Rajamahendravaram  &nbsp;<a href ="https://drive.google.com/file/d/0B9NnnD6wKWXSODBQTk0tX25SWVo1aHRweFJ6b2UtZGl6ekFN/view" target="new" style="color:#ffc761;font-weight: bold;">LIST OF PARTICIPANTS</a> </p>
+					
+<!--  <p><a href="downloads/prc_paper_31_08_2018.pdf" target="new" style="color: #fff">Last Date For Submisson of Representations  to PRC is 
+
+20.09.2018.&nbsp;<img src="images/new.gif" border="0"></a> </p> -->
+						 
+						 </marquee>
+						</div>
+				</div>
+			
+		</div></div>
+<!-- ============================================================= Page info ==================================================-->		 
+
+<div class="container emp-profile">
+            
+<form method="post">
+                <b><a style="float: right; margin-right: 100px;" href="javascript:history.go(-1)"><font
+                        size="4" color="Red"><button type="button">Back </font> </button></a></b><font></form>
+
+<div class="row">
+ <h1><font face="verdana" color="tomato"> DIRECTOR'S PROFILE</font></h1>                   
+<div class="col-sm-3">
+                        
+<div class="profile-img">
+                            
+<div id="comp-jng717q3" itemscope itemtype="http://schema.org/ImageObject" class="image">
+
+<img src="https://static.wixstatic.com/media/8e451e_8084f971f9d846269a3a365f87e0f48e%7Emv2.jpg_srz_160_160_85_22_0.50_1.20_0.00_jpg_srz" alt="JSNM.jpg" title="" itemprop="contentURL"
+                     width="160" height="160"
+                />
+          
+</div>
+                                             
+ </div>  
+<div class="row">
+                    <div class="col-md-12">
+                        <div class="profile-work">
+                            <p>OFFICIAL CONTACT INFORMATION</p>
+                            <a target="_blank" href="https://www.apsfarjy.com">Academy Website</a><br>
+                            <a target="_blank" href="mailto:directorapsfa.gmail.com">Director's e-mail ID</a><br>
+                            <a target="_blank" href="https://www.apsfarjy.com/contact-us">Academy Address</a><br>
+                        </div>                       
+    </div>          </div>  </div>      
+ <div class="col-md-4">
+<div class="profile-head">
+
+<h2><font face="verdana" color="blue"> Sri J.S.N.Murthy</font></h2>
+ 
+<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M.Sc.(Agri), M.Sc.(Forestry)</font> </h5>                           <h4><font face="verdana" color="blue">DIRECTOR</font></h4>
+</div>
+
+ </div>
+  <div class="col-md-9">
+      <div class="well">
+      <p><ul class="nav nav-tabs" id="myTab" role="tablist">
+
+<li class="nav-item">
+                                    
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Brought up</a></li>
+        <li class="nav-item">
+                                    
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#acadamic" role="tab" aria-controls="acadamic" aria-selected="false">Acadamic</a>
+</li>
+     <li class="nav-item">
+                                    
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#career" role="tab" aria-controls="career" aria-selected="false">Career</a>
+</li>           <li class="nav-item">
+                                    
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#service" role="tab" aria-controls="service" aria-selected="false">Service</a>
+</li>
+<li class="nav-item">
+                                    
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#awards" role="tab" aria-controls="awards" aria-selected="false">Awards</a>
+</li>
+<li class="nav-item">
+                                    
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#research" role="tab" aria-controls="research" aria-selected="false">Research</a>
+</li>
+<li class="nav-item">
+ 	
+     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#publication" role="tab" aria-controls="publication" aria-selected="false">Publications</a>
+</li>
+<li class="nav-item">
+ 	
+     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#visits" role="tab" aria-controls="visits" aria-selected="false">Foreign Visits</a>
+</li>
+    </ul>
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+<div class="panel panel-primary">
+<!--<div class="panel-heading">Brought up</div>-->
+<div class="panel-body">
+<h3><font face="verdana" color="green">Brought up:</font></h3>
+<ul>
+ 
+<li class="well well-sm">
+<p>Mahabubnagar, Nalgonda of Telangana region, Kurnool and Ananthapur of Rayalaseema Region, Vizag, Kakinada, Guntur and Machilipatnam of Andhra Region.<p></li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="acadamic" class="tab-pane fade">
+   <div class="panel panel-primary">
+<!--<div class="panel-heading">Acadamic</div>-->
+<div class="panel-body">
+<h3><font face="verdana" color="green">Academic back ground:</font></h3>
+<ul>
+ 
+<li class="well well-sm">Post graduate degree in Agriculture, and P.G. Diploma in Forestry and allied subjects (equivalent to M.Sc., forestry) awarded by SFSC, Government of India</li>
+</ul>
+
+
+</div>
+</div>
+</div> 
+
+<div id="career" class="tab-pane fade">
+   <div class="panel panel-primary">
+<!--<div class="panel-heading">Career</div>-->
+<div class="panel-body">
+<h3><font face="verdana" color="green">Career Brief:</font></h3>
+<ul>
+ <li class="well well-sm">On completion of Post graduation in Agriculture,(1983) joined the APAU Hyderabad and served the university till the end of December 1983. While serving the University, taught Soil Science and Agricultural chemistry to the students of Intermediate (Vocational course)</li>
+</ul>
+
+</div>
+</div>
+</div> 
+                                         
+
+
+<div id="service" class="tab-pane fade">
+   <div class="panel panel-primary">
+<!--<div class="panel-heading">Service</div>-->
+<div class="panel-body">
+<h3><font face="verdana" color="green">State service/ Forest service details:</font></h3>
+<ul>
+<li class="well well-sm">Joined the state Forest service on 1.1.1984 in the cadre of Assistant Conservator of Forests and retired from service on superannuation on 30.06.2018. Thus in total rendered about three and half decades service in Forest Department and other than Forest Department.
+
+</li>
+<li class="well well-sm">
+Served all parts of erstwhile Andhra Pradesh State including 12 years in Telangana, 4 1/2 years in Rayalaseema, 10 years in Andhra, 6 years in Coastal Andhra regions.
+
+</li>
+<li class="well well-sm">Started the career in Adilabad district as Assistant Conservator of Forests in January 1986 and worked as ACF Normal, Sub-DFO, Chinnore till December 1989.
+
+<li class="well well-sm">
+Later posted in Head Office where he served till September 1991.
+
+</li>
+<li class="well well-sm">Served various other organizations on deputation from September 1991 to December 1999 and had an opportunity to work as
+
+Executive Director, SC Corporation,
+
+Project Director, Housing,
+
+Project Director, DRDA/DWMA,
+
+Project Officer, ITDA, Sitampeta,
+
+Joint Director Social welfare/ BC Welfare,
+
+Joint Director (Planning),
+
+District Youth welfare officer,
+
+Adult Education officer etc.,
+
+</li><li class="well well-sm">
+December 1999-March 2010: DFO, Medak, SS Hyderabad, DFO Mahabubnagar, DFO Hyderabad, DFO, Eluru, and DFO/CF, Kakinada</li>
+
+
+<li class="well well-sm">06/2010 to 09/2012 worked as Conservator of Forests, Rajahmundry circle, Rajahmundry
+
+</li><li class="well well-sm">
+09/2012 to 04/2015- Regional Manager, APFDC Ltd., Rajahmundry region
+
+</li>
+<li class="well well-sm">During the period from Feb 2015 to April 2015, held the additional charge of Vizag Region also which deals with mainly Coffee Plantations.
+
+</li>
+<li class="well well-sm">April 2015 to August 2017- CCF, Kurnool circle, Kurnool
+
+</li>
+<li class="well well-sm">September 2017 to June 2018- CCF, Rajahmundry circle, Rajahmundry
+
+</li>
+<li class="well well-sm">Also held the additional charge of the CF WLM Circle, Eluru, WLM Circle, Tirupathi, Territorial Circle, Ananthapur and Territorial circle, Guntur, CCF SF Circle Ananthapuram, Vijayawada and Kadapa.
+
+</li><li class="well well-sm">
+Held the charge of CEO EGREE, Kakinada and additional charge of the Director APFSA Rajamahendravaram.
+
+</li><li class="well well-sm">
+Retired from service on superannuation on 30.06.2018.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div id="awards" class="tab-pane fade">
+   <div class="panel panel-primary">
+<!--<div class="panel-heading">Awards</div>-->
+<div class="panel-body">
+<h3><font face="verdana" color="green">Awards and Achievements:</font></h3>
+<ul>
+<li class="well well-sm">Certificate of appreciations for the commendable service rendered as Project Officer, ITDA, Seethampet, Srikakulam District
+
+</li>
+<li class="well well-sm">
+Recipient of Certificate of appreciations thrice for the commendable service rendered as Executive Director, S.C. Corporation Srikakulam, Srikakulam District.</li>
+<li class="well well-sm">
+
+Received certificate of appreciation from the Hon'ble Chief Minister of A.P. on the occasion of Independence day celebrations on 15th August 1996 for the commendable service rendered as Nodal Officer in Srikakulam District in the implementation of Pajala vaddaku palana and Janmabhoomi concepts.</li>
+<li class="well well-sm">
+
+
+Received certificate of appreciation as District Manager, APSHC Ltd., Srikakulam Branch, Srikakulam.</li>
+<li class="well well-sm">
+
+As District Manager, APSHC Ltd., Srikakulam Branch, the district unit for the first time in its history was awarded FIRST RANK in the entire state in recognition of its overall performance for the year 1996-1997.</li>
+<li class="well well-sm">
+
+
+Under his aegis Mahabubnagar DIVISION was awarded "Indira Priayadarshini Vruksha Mitra" a prestigious national award.
+
+</li>
+<li class="well well-sm">
+
+He has received certificate appreciation for his outstanding contribution in reviving Kolleru Lake to its pristine glory.</li>
+<li class="well well-sm">
+
+He was awarded certificate of appreciation for the commendable service rendered in 2006 Godavari flood relief and rescue operations and received merit certificate for the meritorious service rendered in the capacity of Divisional Forest Officer, Eluru.</li>
+</ul>
+
+</div>
+</div>
+</div>
+ 
+
+<div id="research" class="tab-pane fade">
+   <div class="panel panel-primary">
+<!--<div class="panel-heading">Research</div>-->
+<div class="panel-body">
+<h3><font face="verdana" color="green">Academic bent of mind and research aptitude:</font></h3>
+<ul>
+<li class="well well-sm">A research article titled "Trails on vegetative propagation in Poniki trees-Givotia rottleriformis" was presented in a National workshop held at Tirupathi during 1991 and the same was published.
+
+
+
+</li>
+<li class="well well-sm">During 2002-2004 conducted research on one of the important and endangered medicinal plants namely Decalepis hameltonii (Maredu geddalu) and standardized its regeneration techniques. A research article namely "Conservation and re-introduction of Decalepis hamiltonii-wight & Arn (Periplocaceae) in its Natural Habitat" was published in "Advances in Medicinal plants" authored by K.Janardhana Reddy, Bir Bahadur, B.Bhadraiah and MLN Rao.
+
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+ 
+<div id="publication" class="tab-pane fade">
+   <div class="panel panel-primary">
+<!--<div class="panel-heading">Publication</div>-->
+<div class="panel-body">
+<h3><font face="verdana" color="green">Publications:</font></h3>
+<ul>
+<li class="well well-sm">A booklet on "Community Forest Management - various Treatment Models" was authored by me and the same was published by the A.P. Forest Department and circulated among all the stake holders under community Forest Management in the entire state.
+
+
+
+</li>
+<li class="well well-sm">A Booklet on "Community Forest Management - Hand book for Community Forest workers" was authored by me and the same was published by the A.P. Forest Department and circulated among all the stake holders under community Forest Management in the entire state.
+
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="visits" class="tab-pane fade">
+   <div class="panel panel-primary">
+<!--<div class="panel-heading">Visits</div>-->
+<div class="panel-body">
+<h3><font face="verdana" color="green">Foreign countries Visited:</h3></font>
+<ul>
+<li class="well well-sm">Finland (Helsinki, Joensuu)
+
+
+
+</li>
+<li class="well well-sm">Russia (St. Peters Berg)
+
+
+
+</li>
+<li class="well well-sm">United States of America (Texas, Phoenix, Neveda, Arizona, Washington DC, New York, Virginia, Mary time, Raleigh, South Carolina, Atlanta, Florida)
+
+
+
+</li>
+<li class="well well-sm">Republic of China (Beijing, Xeon)
+
+
+
+</li>
+
+</ul>
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+</div></div>
+
+		
+
+
+
+
+
+
+
+
+
+
+						
+					
+				
+<!-- ============================================================= Page info ==================================================-->
+		   
+		   
+<!-- ============================================================= FOOTER ==================================================-->
+
+<footer id="footer" class="footer color-bg">
+	<div class="footer-bottom inner-bottom-sm">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading outer-bottom-xs">
+                     <h4 class="module-title">ABOUT US</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li><a href="#">Academy Profile</a></li>
+                            <li><a href="#">LOGO</a></li>
+                            <li><a href="#">Photo Gallery</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">ADMINISTRATION</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li><a href="#">Board of Control</a></li>
+                            <li><a href="#">Director</a></li>
+                            <li><a href="#">Course Directors</a></li>
+                            
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">ACADEMICS</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li><a href="#">Registration</a></li>
+                            <li><a href="#">Faculty</a></li>
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="#">Google Classroom</a></li>
+                            
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div>
+				
+				
+				 <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">FACILITIES</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+			<li><a href="#" target="_balnk">HOSTEL</a></li>
+			<li><a href="#" target="_balnk">COMPUTER LAB</a></li>
+                         <li><a href="#">LIBRARY</a></li>
+                          <li><a href="#">DIGITAL LIBRARY</a></li>
+			<li><a href="#">GYM</a></li>
+                           
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+				
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright-bar">
+        <div class="container">
+            
+<div class="" style="padding:2px;"><div class="col-sm-12 col-xs-12 col-md-9 col-lg-9">
+                <div class="copyright">
+                   Copyright © 2018
+                    <a href="https://www.apsfarjy.com/">A.P.State Forest Academy</a>
+                    - All rights Reserved
+
+<div style="width:200px; float:right">
+  <a href="https://www.facebook.com/apsfa18" class="fa fa-facebook" target="blank"></a>
+  <a href="https://twitter.com/apsfarjy " class="fa fa-twitter" target="blank"></a>
+  <a href="https://plus.google.com/112228901449831546272" class="fa fa-google" target="blank"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+  <a href="#" class="fa fa-youtube"></a>
+  </div>
+  <div style="clear:both"></div>
+  </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+
+</footer>
+<!-- ============================================================= FOOTER : END============================================================= -->		   	
+
+
+
+
+
+
+<div class="modal fade" id="login-modal" tabindex="-1" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container" "="">
+					<div style="background: #7a7075;padding: 10px;color: #ffffff;margin-bottom: 20px;"><h1>LOGIN</h1></div>
+				    <form name="loginform" id="loginform" method="post" action="Login.do" onsubmit="return display()">
+      
+        <input type="hidden" name="source" value="web">
+        
+        
+  
+			       <div style="width: 100%;	text-align: center;">
+       
+					        <font size="4" color="red">
+											</font>
+											
+						</div>	
+<input id="username" type="text" name="username" maxlength="40" size="13" placeholder="Username" autofocus="" required="">
+<input id="password" type="password" name="password" maxlength="50" size="13" placeholder="Password" required="">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+					
+				  </form>
+					
+				  <div class="login-help">
+					 <span style="float: right; color:#000;"> <a href="FirstPage.do?status=forgot" class="forgot_password">Unable to Access?</a></span>
+				  </div>
+				</div>
+			</div>
+		  </div>
+
+
+		 
+		 
+
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>	
+<script src="js/translate.js" type="text/javascript"></script>          
+		 
+
+
+<script>
+	function openCity(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+	</script>
+	<script>
+	 
+				function translateLanguage(lang) 
+				{
+
+					var $frame = $('.goog-te-menu-frame:first');
+					if (!$frame.size()) {
+						alert("Error: Could not find Google translate frame.");
+						return false;
+					}
+					$frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+					return false;
+				}
+
+	</script>
+
+
+	<script src="js/amCharts/amcharts.js" type="text/javascript"></script>
+			<script src="js/amCharts/serial.js" type="text/javascript"></script>
+			<script src="js/amCharts/pie.js"></script>
+			<script src="js/amCharts/export.min.js"></script>
+			<script src="js/amCharts/light.js"></script>
+			<script src="js/animate.min.js"></script>
+	 <script src="js/jquery.newsTicker.js"></script>
+	<script src="js/jquery.slimscroll.js"></script>
+	<script>
+		$(function(){
+		
+
+	   
+		  
+		  $('#testDiv2').slimScroll({
+		   color: '#253f60',
+			  alwaysVisible: true
+		  });
+
+
+
+
+		});
+		</script>
+		 
+		
+		<script>
+	var chart = AmCharts.makeChart("chartdiv", {
+		"theme": "light",
+		"type": "serial",
+		"startDuration": 2,
+		"dataProvider": [{
+			"country": "Economic",
+			"visits": 67830.19,
+			"color": "#52464d"
+		},  {
+			"country": "Social",
+			"visits": 67120.25,
+			"color": "#f8ab1f"
+		},
+		 {
+			"country": "General",
+			"visits": 56113.17,
+			"color": "#f8ab1f"
+		}
+		],
+		"valueAxes": [{
+			"position": "left",
+			"axisAlpha":0,
+			"gridAlpha":0
+		}],
+		"valueAxes": [{
+			"position": "left",
+			"title": "Rupees In Cr"
+		}],
+		"graphs": [{
+			"balloonText": "[[category]]: <b>[[value]]</b>",
+			"colorField": "color",
+			"fillAlphas": 0.85,
+			"lineAlpha": 0.1,
+			"type": "column",
+			"topRadius":1,
+			"valueField": "visits"
+		}],
+		
+		"depth3D": 30,
+		"angle":30,
+		"chartCursor": {
+			"categoryBalloonEnabled": false,
+			"cursorAlpha": 0,
+			"zoomable": false
+		},
+		"categoryField": "country",
+		"categoryAxis": {
+			"gridPosition": "start",
+			"axisAlpha":0,
+			"gridAlpha":0
+
+		},
+		"export": {
+			"enabled": true
+		 }
+
+	}, 0);
+		</script>
+	<!-- Chart code -->
+
+	<script>
+	var chart = AmCharts.makeChart("chartdiv2", {
+		"theme": "light",
+		"type": "serial",
+		"startDuration": 2,
+		"dataProvider": [{
+			"country": "Receipts",
+			"visits": 191063.61,
+			"color": "#52464d"
+		}, {
+			"country": "Expenditure",
+			"visits": 191059.72,
+			"color": "#f8ab1f"
+		} ],
+		"valueAxes": [{
+			"position": "left",
+			"title": "Rupees In Cr"
+		}],
+		"graphs": [{
+			"balloonText": "[[category]]: <b>[[value]]</b>",
+			"fillColorsField": "color",
+			"fillAlphas": 1,
+			"lineAlpha": 0.1,
+			"type": "column",
+			"valueField": "visits"
+		}],
+		"depth3D": 30,
+		"angle": 30,
+		"chartCursor": {
+			"categoryBalloonEnabled": false,
+			"cursorAlpha": 0,
+			"zoomable": false
+		},
+		"categoryField": "country",
+		"categoryAxis": {
+			"gridPosition": "start",
+			"labelRotation": 0
+		},
+		"export": {
+			"enabled": true
+		 }
+
+	});
+	</script>
+	<script>
+	var chart = AmCharts.makeChart( "chartdiv3", {
+	  "type": "pie",
+	  "theme": "light",
+	  "dataProvider": [ {
+		"country": "Lithuania",
+		"litres": 501.9
+	  }, {
+		"country": "Czech Republic",
+		"litres": 301.9
+	  }],
+	  "valueField": "litres",
+	  "titleField": "country",
+	   "balloon":{
+	   "fixedPosition":true
+	  },
+	  "export": {
+		"enabled": true
+	  }
+	} );
+	</script>
+<script>
+		$(function(){
+		
+
+	   
+		  
+		  $('#testDiv2').slimScroll({
+		   color: '#253f60',
+			  alwaysVisible: true
+		  });
+
+
+
+
+		});
+		
+		$(document).ready(function () {
+
+    $('#memberModal1').modal('show');
+	 
+
+});
+		</script>
+		 
+
+
+	 <script>
+			
+				var nt_example1 = $('#nt-example1').newsTicker({
+					row_height: 80,
+					max_rows: 3,
+					duration: 4000,
+					prevButton: $('#nt-example1-prev'),
+					nextButton: $('#nt-example1-next')
+				});
+				
+			</script>
+			<script>
+function blink_text() {
+    $('.blink').fadeOut(500);
+    $('.blink').fadeIn(500);
+}
+setInterval(blink_text, 1000);
+</script>
+			
+	  </body>
+		
+	</html> 	

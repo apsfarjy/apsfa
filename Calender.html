@@ -1,0 +1,773 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title> APFSA | AMARAVATHI </title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Mallanna&amp;subset=telugu" rel="stylesheet" />
+    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+   
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,400i,500,500i,600,600i,700,800,900');
+body{background-color: #fff !important; font-family: 'Mallanna', sans-serif !important; font-size: 16px !important; color: #000 !important; font-weight: 400 !important; }
+a{color: #3c4b66; outline: none !important;}
+.m-top30{ margin-top: 30px; }
+.m-top15{ margin-top: 15px; }
+/*Design Pattern*/
+.home-services { }
+.carousel{margin-bottom: 55px;}
+.srv-box{border-radius: 3px; background: #fff; border: 1px solid #dcdcdc; padding:26px 15px; text-align: center; box-shadow:0 0px 10px rgba(134, 156, 187, 0.24); 
+transition: all .3s; cursor: pointer; margin-bottom: 15px;  }
+.home-services a{text-decoration: none;}
+.srv-box:hover{ box-shadow: 0 20px 30px rgba(125, 147, 178, .15); }
+.srv-box h3{color: #222c3e;; margin: 0px;  font-size: 18px; font-weight: 600; margin: 8px 0px 3px; text-transform: uppercase; }
+.srv-box:hover h3{ color: #3fc997; }
+.cl-b{ color: #2196f3; }
+.cl-g{color:#8bc34a;}
+.cl-o{ color: #ff9800; }
+.cl-r{color:#ff5722;}
+.cl-y{ color: #ffc107; }
+.cl-db{color:#0d47a1;}
+.cl-p{color:#7c4dff;}
+.cl-lb{color:#00bcd4;}
+.link-external {display: none !important;}
+.link-https {display: none !important;}
+.portlet { margin-top: 29px;}
+.portlet .portletHeader {display: none !important;}
+.portlet .portletFooter {display: none !important;}
+.portlet .portletContent {
+    font-size: 15px !important;;
+    font-weight: 500 !important;;
+}
+#viewlet-below-content{display:none !important;;}
+hr{
+    border: 2.8px solid #005ea5 !important;
+}
+h1, h2, h3, h4, h5, h6 { line-height: 1.3; }
+h1, h2, {
+    color: #222 !important;
+    font-weight:500 !important;
+}
+h4{font-size: 21px !important;}
+table{color:#000 !important; background: transparent !important; }
+table tr td { padding:2px 12px;}
+
+
+.bordersOff tr td { border:0px !important}
+
+.dncalendar-body table tr td { padding:2px 6px;}
+.portlet .portletContent > *, .portlet .portletContent > div:not(.portalMessage) {padding:0px !important;}
+.home-services-v1 { padding: 60px 0px;  background: #fff;}
+.home-services-v1 .srv-box{  background: #fff;  padding:26px 15px; text-align: center;  border: none; box-shadow: none;
+transition: all .3s; cursor: pointer;  }
+.home-services-v1 .srv-box .fa{background: #fff; padding: 18px; transition: all .3s;  border-radius: 60px; box-shadow: 0px 2px 10px #ddd; width: 66px;height: 66px; }
+.home-services-v1 a{text-decoration: none; color: #3c4b66;}
+/*.home-services-v1 .srv-box:hover{ box-shadow: 0 20px 30px rgba(125, 147, 178, .15); }*/
+.home-services-v1 .srv-box h3{ margin: 0px;  font-size: 18px; margin: 18px 0px 3px; transition: all .3s; font-weight: 600; }
+.home-services-v1 .srv-box:hover h3{ color: #3fc997; }
+.home-services-v1 .srv-box:hover .fa{color: #3c4b66; box-shadow: 0 15px 20px rgba(125, 147, 178, .15); }
+
+.serv-box{padding: 12px;
+border: 1px solid rgb(223, 232, 246);
+box-shadow: 0px 2px 6px rgb(228, 228, 228);
+border-radius: 3px; transition: all .3s; }
+.serv-box h3{ margin: 0px;
+font-size: 18px;
+padding: 16px 0px 3px;
+font-weight: 600;
+text-transform: uppercase; transition: all .3s;  }
+.serv-box:hover {box-shadow: 0 5px 19px rgba(125, 147, 178, .15); }
+.serv-box:hover h3{  color: #3fc997;}
+
+/*31-01-2018*/
+/*#personaltools-login{background: #fff;
+padding: 19px 32px 12px;
+border-bottom-left-radius: 3px;
+border-bottom-right-radius: 3px;
+color: #222;
+font-size: 18px; font-weight:600;}*/
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+
+.plone-navbar-nav li .submenu a{font-size:15px; }
+.plone-navbar-nav li .submenu a:hover{
+    background-color: #283041 !important;
+    text-decoration: none;
+}
+
+.navbar {
+    border-radius: 0px !important;
+}
+.plone-nav > li > a:hover, .plone-nav > li > a:focus {
+    text-decoration: none;
+    background-color: #656b78 !important; 
+}
+.plone-navbar-nav > .selected > a, .plone-navbar-nav > .selected > a:hover, .plone-navbar-nav > .selected > a:focus {
+    color: white;
+    background-color: #283041 !important;
+}
+.plone-nav > li > a:hover, .plone-nav > li > a:focus {
+    text-decoration: none;
+    background-color: #283041 !important;
+}
+.plone-navbar-nav li .submenu{background-color: #464c59  !important;}
+.plone-nav > li > a {font-size: 18px !important;}
+.plone-navbar {
+    background-color: #3c4453 !important;
+    color: white;
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px !important;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
+}
+.documentFirstHeading {
+    padding-bottom: 9px;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #cccccc;
+    display: none !important;
+}
+
+.plone-breadcrumb {
+    margin-top: 0px !important;
+}
+.portlet .portletContent > ul .portletItemDetails {    margin-top: 0px !important;;} 
+.portlet .portletContent > ul > li a {
+    display: block;
+    padding: 10px 15px 5px 30px !important;
+    position: relative;
+    z-index: 1;
+    color: #086ca3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+.txt-trans{ 
+    z-index: 9999 !important; display:none !important;
+    position: fixed;
+    right: 100px;}
+	
+#portal-anontools { padding-top: 20px;
+    font-size: 20px;
+}	
+	
+.ministers_tables{}
+.ministers_tables table{ border: 0px solid #e5e5e5;}
+.ministers_tables tr td {  border: 0px solid #e5e5e5; }
+
+#content-core a {
+    border-bottom: 0px solid #ddd !important;
+}
+a:hover, a:focus {
+    color: #004665;
+    text-decoration:none !important;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img { width: 100%; }
+
+/*footer{background: #161d2b; padding: 50px 0px;}*/
+/*footer{background: #f6f6f6; padding: 50px 0px;border-top: 3px solid rgba(0, 0, 0, 0.08);}*/
+.ftrwidget{}
+.ftrwidget a{color: #000; text-decoration: none !important;}
+.ftrwidget a:hover{text-decoration: none !important;}
+.ftrwidget h3{ border-bottom: 2px solid #3c4b66; color: #000; display: table; font-size: 20px; font-weight: 600; position:relative; padding-bottom: 16px;margin-bottom: 20px;}
+/*.ftrwidget h3::after{ content:''; position:absolute; width:60px; height:2px;  background:#3c4b66; bottom:0; left:0;right:0; }*/
+.ftrwidget ul li a{ line-height: 2.3; color: #222; font-weight: 600; text-decoration: none; font-size: 16px; text-align: left !important;  cursor: pointer;}
+.ftrwidget ul li a:hover{color: #008a1a;}
+
+/*.socialmedia {padding: 25px 0px 10px; border-top:1px solid #cacaca; margin-top: 30px;}*/
+.socialmedia{}
+.socialmedia a {color: #161d2b; font-size: 22px; text-decoration: none;}
+.socialmedia a:hover{color: #3fc997; font-size: 22px; text-decoration: none;}
+/*.socialmedia .fa{background: #fff;  border-radius: 30px;}*/
+.socialmedia .fa-facebook{ color: #3c5a9a !important; padding: 10px 14px; font-size: 22px; }
+.socialmedia .fa-facebook:hover{color: #3c5a9a}
+.socialmedia .fa-twitter{ color: #00acec; padding: 10px 14px; font-size: 22px; }
+.socialmedia .fa-twitter:hover{color: #00acec;}
+.socialmedia .fa-linkedin{ color: #0882af; padding: 10px 14px; font-size: 22px; }
+.socialmedia .fa-linkedin:hover{color: #0882af !important;}
+.socialmedia .fa-google-plus{ color: #c40d09; padding: 10px 14px; font-size: 22px; }
+.socialmedia .fa-google-plus:hover{color: #c40d09;}
+
+.allrightssec{padding: 15px 0px 10px; border-top:1px solid #cacaca;}
+.allrightssec a {color: #333; font-size: 16px; font-weight: 600; }
+.allrightssec a:hover{color: #008a1a; font-size: 15px; text-decoration: underline; text-decoration: none;}
+.allrights{font-size: 15px; font-weight: 500; color: #333; margin-bottom: 0px; }
+.portlet .portletHeader {
+    background: #e8e8e8 !important;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000 !important;
+}
+
+.estcard{ background: rgba(233, 248, 255, 0.62); padding: 15px 25px; font-weight: bold; font-size: 23px; color: #020506; 
+     margin-bottom: 15px;  border-radius: 3px; min-height: 130px;} 
+.estcard-orbg{ background: rgba(255, 175, 103, 0.45); text-align: center;  color: #fff; }    
+.estcard-prbg{ background: rgba(166, 173, 255, 0.59); text-align: center;  color: #fff; }    
+.estcard-abtbg{ background: rgba(171, 189, 197, 0.51); text-align: center;  color: #fff; }    
+.estcard-cabbg{ background: rgba(228, 217, 182, 0.66); text-align: center;  color: #000; }     
+.estcard-protocolbg{ background: rgba(208, 234, 195, 0.5); text-align: center;  color: #000; } 
+.estcard-politicalbg{ background: rgba(39, 137, 222, 0.65); text-align: center;  color: #fff; } 
+.estcard-law-order{ background: rgba(31, 31, 30, 0.31); text-align: center;  color: #fff; } 
+
+
+#portal-footer-wrapper { margin-top: 30px; border-top: 3px solid rgba(0, 0, 0, 0.08); background-color: #f4f4f4 !important; text-align: left !important;}
+#portal-footer-wrapper .portlet .portletContent li {
+    background: transparent;
+    display: block !important;
+    border: 0;
+    white-space: nowrap;
+    padding: 5px 0px !important;
+}
+.ftrlinkpad{ padding-top: 1px;}
+#portal-footer-wrapper a:hover {
+    color: #008a1a !important;
+}
+#portal-footer-wrapper a {
+    color: #222 !important;
+}
+#portal-footer-wrapper .portletWrapper:first-child{border-bottom: 0px !important;}
+#portal-header {
+    margin: 5px !important;
+} 
+#portal-logo img{ width: 560px;}
+#portal-searchbox {padding-top: 25px;}
+#portal-searchbox [type="submit"] {
+    margin-left: -1px;
+    vertical-align: top;
+    width: auto;
+    display: inline-block;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.standalone, [type="submit"], button{color: #fff;
+background-color: #3c4453;
+border-color: #3c4453;
+font-weight: 500;
+}
+
+#portal-searchbox input[type="text"]{ border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;}
+.standalone [type="submit"] { font-weight: 500;
+color: #fff;
+background-color: #3c4453 ;
+border-color: #3c4453; }
+
+.LSBox{padding-top: 15px; }
+.ulpad{padding-left:0px;}
+
+/* TREE VIEW */
+.tree ul {
+	padding-top: 20px; position: relative;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.tree li {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%; height: 20px;
+}
+.tree li::after{
+	right: auto; left: 50%;
+	border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+	border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0; height: 20px;
+}
+
+.tree li a{
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #0f1921;
+    font-size: 14px;
+    font-weight: 500;
+	display: inline-block;
+	box-shadow:2px 2px 0px rgba(0, 94, 165, 0.25);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ul li a {
+	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{
+	border-color:  #94a0b4;
+}
+
+
+@media screen and (min-width: 768px){
+.carousel-control .fa-angle-left, .carousel-control .fa-angle-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+    width: 34px;
+    height: 34px;
+    margin-top: -10px;
+    font-size: 32px;
+}
+
+.carousel-control .fa-angle-left, .carousel-control .icon-prev {
+    left: 50%;
+    margin-left: -10px;
+}
+
+.carousel-control .fa-angle-left, .carousel-control .fa-angle-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+    background:#000;
+}
+
+.carousel-control.left{ background: transparent; }
+.carousel-control.right{ background: transparent; }
+</style>
+
+
+
+
+       
+ 
+    <style>
+       
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{font-family: 'Montserrat', sans-serif;}
+.dncalendar-inactive {
+	opacity: 0.2;
+}
+
+.dncalendar-header {
+	margin: 20px 0;
+    position: relative;
+}
+
+.dncalendar-header h2 {
+	color: #434343;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dncalendar-header .dncalendar-links {
+	height: 19px;
+    width: 100%;
+   /* position: absolute;*/
+    /*top: -5px;*/
+    margin-top: -40px;
+}
+
+.dncalendar-header .dncalendar-links div {
+	cursor: pointer;
+    width: 35px;
+    height: 35px;
+    -webkit-user-select: none;
+    touch-action: pan-y;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dncalendar-header .dncalendar-links .dncalendar-next-month {
+	position: absolute;
+    right: 6px;
+    background: url('https://img.icons8.com/flat_round/64/000000/arrow.png');
+    background-size: 100%;
+}
+
+.dncalendar-header .dncalendar-links .dncalendar-prev-month {
+	position: absolute;
+    left: 10px;
+    background: url('https://img.icons8.com/flat_round/64/000000/circled-left.png') ;
+    background-size: 100%;
+}
+
+.dncalendar-body {
+	margin: 0 0 10px;
+}
+
+.dncalendar-body table {
+	width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.dncalendar-body table th, td {
+	display: table-cell;
+	margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.dncalendar-body thead td {
+	color: #222;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 11px 0 !important;
+}
+
+.dncalendar-body tbody tr td {
+	width: 13%;
+	border-top: 1px solid #ddd;
+	color: #bdbdbd;
+	background: #f8f8f8;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.dncalendar-body tbody td#calendarClick {
+	cursor: pointer;
+}
+
+.dncalendar-body tbody td.calendarClick {
+	color: #434343;
+	background: #fff;
+}
+	
+.dncalendar-body tbody td .entry {
+	padding: 9px 0 6px;
+	position: relative
+}
+
+.dncalendar-body tbody td.calendarClick:active {
+	background: #ddd
+}
+
+/*.dncalendar-body tbody td .entry:after
+{
+	content:attr(data-title);
+	left:0;
+	position:absolute;
+	font-size: 8px;
+    font-weight: 600;
+    bottom: -2px;
+	bottom:1px;
+	text-align:center;
+	width:100%
+}
+*/
+.dncalendar-body table td.holiday {
+	color: #c55 !important;
+}
+
+.dncalendar-body table td.calendarClick.holiday {
+	color: #9c0303 !important;
+}
+
+.dncalendar-body table td.default-date {
+	border: 1px solid #96D4FD;
+	color: #96D4FD !important;
+	background: #e6f2fa;
+}
+
+.dncalendar-body table td.calendarClick.default-date {
+	border: 1px solid #0d7fcc;
+	color: #0d7fcc !important;
+	background: #e6f2fa;
+}
+
+.dncalendar-body table td.today-date {
+	border: 1px solid #7EE699;
+    color: #7EE699 !important;
+    background: #E9FDEE;
+}
+
+.dncalendar-body table td.calendarClick.today-date {
+	border:0px solid #0d61cc;
+    color: #222 !important;
+    background: #ffa218;
+    border-radius: 0px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.dncalendar-body table td.note{ background-color: rgba(253, 109, 109, 0.11); }
+.dncalendar-body table td.calendarClick.note {
+	position: relative;
+    background-color: #fd6d6d;
+    color: #fff;
+}
+.dncalendar-body table td.optional_note{ background-color: rgba(148, 204, 148, 0.27); }
+.dncalendar-body table td.calendarClick.optional_note {
+	position: relative;
+    background-color: #4ba14b;
+    color: #fff;
+}
+
+ 
+
+/*.dncalendar-body table td.note:before {
+	display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    content: "";
+    border-top: 5px solid #c55;
+    border-right: 5px solid #c55;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.dncalendar-body table td.calendarClick.note:before {
+	display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    content: "";
+    border-top: 5px solid #d00;
+    border-right: 5px solid #d00;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}*/
+
+.dncalendar-note-list {
+	list-style: none;
+	margin-left: 4.5%;
+	margin-bottom: 20px;
+	padding: 0;
+	color: #999
+}
+
+.dncalendar-note-list .date {
+	color: #f84c4c;  
+}
+.dncalendar-note-list .date span{ text-align: left;  color: #000; }
+ .label {
+          font-size: 100%;
+          color: #333333;
+        }
+
+    </style>
+</head>
+  <body>
+<div class="col-md-9">
+<div class="row">
+<div class="col-sm-6">
+<h3><strong> కార్యాలయపు సెలవు దినాలు/Official Holidays</strong></h3>
+<div style="border: 1px solid #d8d8d8;">
+<h4 id="dncalendar-container"> </h4>
+<p style="padding: 0px 16px 10px;"><img src="https://www.gad.ap.gov.in/gen.png/@@images/fabc9c53-c38d-4cf5-94f9-722d1c8d6461.png" data-linktype="image" title="gen.png" data-val="f12b6fd5f5d844f982afa0c8d30d536b" data-scale="large" alt="gen.png" class="image-inline" /> సాధారణ సెలవులు (General) <img src="https://www.gad.ap.gov.in/opt.png/@@images/3e8d2a8c-0b8f-4b24-a697-c9f5826fbfd5.png" data-linktype="image" title="opt.png" data-val="ea58debb4429445883e179682923cf3e" data-scale="large" alt="opt.png" class="image-inline" /><span style="color: #076b07;">ఐచ్ఛిక సెలవులు (Optional) </span></p>
+</div>
+</div>
+
+
+<script type="text/javascript">
+		$(document).ready(function() {            
+			var my_calendar = $("#dncalendar-container").dnCalendar({		        
+            	notes: [
+                		{ "date": "2018-01-01", "note": ["New Year's Day"], "type":"oh" }, 
+                		{ "date": "2018-01-14", "note": ["Bhogi (GH)"], "type":"gh" }, 
+                		{ "date": "2018-01-15", "note": ["Sankranthi"], "type":"gh" },
+                		{ "date": "2018-01-16", "note": ["Kanuma"], "type":"gh" }, 
+						{ "date": "2018-01-22", "note": ["Sree Panchami"], "type":"oh" },
+                		{ "date": "2018-01-26", "note": ["Republic Day"], "type":"gh" },
+
+						{ "date": "2018-02-01", "note": ["Hazrat Syed Mohd. Juvanpuri Mehdi's Birthday"], "type":"oh" },
+                		{ "date": "2018-02-13", "note": ["Mahasivarathri"], "type":"gh" },
+
+                		{ "date": "2018-03-02", "note": ["Holi"], "type":"gh" },
+                		{ "date": "2018-03-18", "note": ["Ugadi"], "type":"gh" },
+                		{ "date": "2018-03-26", "note": ["Srirama Navami"], "type":"gh" },
+						{ "date": "2018-03-29", "note": ["Mahaveer Jayanthi"], "type":"oh" },
+                		{ "date": "2018-03-30", "note": ["Good Friday"], "type":"gh" },
+
+						{ "date": "2018-04-01", "note": ["Birthday of Hazart Ali"], "type":"oh" },
+                		{ "date": "2018-04-05", "note": ["Babu Jagjivan Ram's Birthday"], "type":"gh" },
+                		{ "date": "2018-04-14", "note": ["Dr. B.R Ambedkar's Birthday"], "type":"gh" },
+						{ "date": "2018-04-15", "note": ["Shab-e-Meraj"], "type":"oh" },
+						{ "date": "2018-04-18", "note": ["Basaveswara Jayanthi"], "type":"oh" },
+						{ "date": "2018-04-30", "note": ["Buddha Purnima"], "type":"oh" },
+
+						{ "date": "2018-05-02", "note": ["Shab-e-Barath"], "type":"oh" },
+						
+						{ "date": "2018-06-05", "note": ["Shahadat Hazart Ali"], "type":"oh" },
+						{ "date": "2018-06-12", "note": ["Shab-e-Qadar"], "type":"oh" },
+						{ "date": "2018-06-15", "note": ["Jumatul-Vida"], "type":"oh" },
+                		{ "date": "2018-06-16", "note": ["Ramzan"], "type":"gh" },
+
+						{ "date": "2018-07-14", "note": ["Ratha Yathra"], "type":"oh" },
+						
+						{ "date": "2018-08-17", "note": ["&#3114;&#3134;&#3120;&#3149;&#3126;&#3135; &#3112;&#3138;&#3108;&#3112; &#3128;&#3074;&#3125;&#3108;&#3149;&#3128;&#3120; &#3110;&#3135;&#3112;&#3147;&#3108;&#3149;&#3128;&#3125;&#3074;"], "type":"oh" },
+                		{ "date": "2018-08-15", "note": [" &#3128;&#3149;&#3125;&#3134;&#3108;&#3074;&#3108;&#3149;&#3120;&#3149;&#3119; &#3110;&#3135;&#3112;&#3147;&#3108;&#3149;&#3128;&#3125;&#3074;"], "type":"gh" },
+                		{ "date": "2018-08-22", "note": ["&#3116;&#3093;&#3149;&#3120;&#3135;&#3110;&#3149; (&#3079;&#3110;&#3149;-&#3081;&#3122;&#3149; &#8211;&#3100;&#3137;&#3129;)"], "type":"gh" },
+						{ "date": "2018-08-24", "note": ["&#3125;&#3120;&#3122;&#3093;&#3149;&#3127;&#3149;&#3118;&#3135; &#3125;&#3149;&#3120;&#3108;&#3074;"], "type":"oh" },
+						{ "date": "2018-08-26", "note": ["&#3126;&#3149;&#3120;&#3134;&#3125;&#3107; &#3114;&#3138;&#3120;&#3149;&#3107;&#3135;&#3118; / &#3120;&#3134;&#3094;&#3136; &#3114;&#3138;&#3120;&#3149;&#3107;&#3135;&#3118; "], "type":"oh" },
+						{ "date": "2018-08-30", "note": ["&#3080;&#3110;&#3149;-&#3079;-&#3095;&#3134;&#3110;&#3136;&#3120;&#3149; "], "type":"oh" },    
+
+				
+						{ "date": "2018-09-03", "note": ["&#3126;&#3149;&#3120;&#3136; &#3093;&#3139;&#3127;&#3149;&#3107;&#3134;&#3127;&#3149;&#3103;&#3118;&#3135;"], "type":"gh" },
+					    { "date": "2018-09-13", "note": ["&#3125;&#3135;&#3112;&#3134;&#3119;&#3093; &#3098;&#3108;&#3137;&#3120;&#3149;&#3109;&#3135;"], "type":"gh" },
+                		 
+				     	{ "date": "2018-09-20", "note": ["9&#3125; &#3118;&#3146;&#3129;&#3120;&#3149;&#3120;&#3074;"], "type":"oh" },
+                		{ "date": "2018-09-21", "note": [" &#3118;&#3146;&#3129;&#3120;&#3149;&#3120;&#3074;"], "type":"gh" },
+    
+                		{ "date": "2018-10-02", "note": ["&#3118;&#3129;&#3134;&#3108;&#3149;&#3118;&#3134;&#3095;&#3134;&#3074;&#3111;&#3136; &#3100;&#3119;&#3074;&#3108;&#3135;"], "type":"gh" },
+						{ "date": "2018-10-08", "note": ["&#3118;&#3129;&#3134;&#3122;&#3119; &#3077;&#3118;&#3134;&#3125;&#3134;&#3128;&#3149;&#3119;"], "type":"oh" },
+                		{ "date": "2018-10-17", "note": ["&#3110;&#3137;&#3120;&#3149;&#3095;&#3134;&#3127;&#3149;&#3103;&#3118;&#3135;"], "type":"gh" },
+                		{ "date": "2018-10-18", "note": ["&#3125;&#3135;&#3100;&#3119;&#3110;&#3126;&#3118;&#3135;"], "type":"gh" },
+						{ "date": "2018-10-30", "note": ["&#3077;&#3120;&#3149;&#3116;&#3134;&#3119;&#3136;&#3112;&#3149;(Chahallum)"], "type":"oh" },
+
+						{ "date": "2018-11-06", "note": ["&#3112;&#3120;&#3093; &#3098;&#3108;&#3137;&#3120;&#3149;&#3109;&#3135;"], "type":"oh" },
+                		{ "date": "2018-11-07", "note": ["&#3110;&#3136;&#3114;&#3134;&#3125;&#3123;&#3135;"], "type":"gh" },
+                	    { "date": "2018-11-21", "note": ["&#3118;&#3135;&#3122;&#3134;&#3110;&#3149;-&#3081;&#3112;&#3149; &#8211;&#3112;&#3116;&#3135;"], "type":"gh" },
+						{ "date": "2018-11-23", "note": ["&#3093;&#3134;&#3120;&#3149;&#3108;&#3135;&#3093; &#3114;&#3138;&#3120;&#3149;&#3107;&#3135;&#3118;/&#3095;&#3137;&#3120;&#3137; &#3112;&#3134;&#3112;&#3093;&#3149; &#3100;&#3119;&#3074;&#3108;&#3135;"], "type":"oh" },
+						
+						{ "date": "2018-12-24", "note": ["&#3093;&#3149;&#3120;&#3135;&#3128;&#3149;&#3118;&#3128;&#3149; &#3080;&#3125;&#3149;"], "type":"oh" },
+                		{ "date": "2018-12-25", "note": ["&#3093;&#3149;&#3120;&#3135;&#3128;&#3149;&#3118;&#3128;&#3149;"], "type":"gh" },
+						{ "date": "2018-12-26", "note": ["&#3116;&#3134;&#3093;&#3149;&#3128;&#3135;&#3074;&#3095;&#3149; &#3105;&#3143;"], "type":"oh" },
+						
+						
+		{ "date": "2019-01-01", "note": ["&#3112;&#3138;&#3108;&#3112; &#3128;&#3074;&#3125;&#3108;&#3149;&#3128;&#3120;  &#3110;&#3135;&#3112;&#3147;&#3108;&#3149;&#3128;&#3125;&#3074;"], "type":"oh" },
+		{ "date": "2019-01-21", "note": ["&#3129;&#3100;&#3134;&#3120;&#3108;&#3149; &#3128;&#3119;&#3149;&#3119;&#3110;&#3149; &#3118;&#3129;&#3149;&#3118;&#3110;&#3149; &#3100;&#3137;&#3125;&#3134;&#3112;&#3135;&#3114;&#3137;&#3120;&#3135; &#3118;&#3142;&#3129;&#3149;&#3110;&#3135; &#3100;&#3119;&#3074;&#3108;&#3135;"], "type":"oh" },
+		{ "date": "2019-01-14", "note": ["&#3117;&#3147;&#3095;&#3135;"], "type":"gh" },
+  		{ "date": "2019-01-15", "note": ["&#3128;&#3074;&#3093;&#3149;&#3120;&#3134;&#3108;&#3135;"], "type":"gh" },
+		{ "date": "2019-01-16", "note": ["&#3093;&#3112;&#3137;&#3118;"], "type":"gh" },
+		{ "date": "2019-01-26", "note": ["&#3120;&#3135;&#3114;&#3116;&#3149;&#3122;&#3135;&#3093;&#3149; &#3105;&#3143; "], "type":"gh" },
+		
+		{ "date": "2019-02-10", "note": ["&#3126;&#3149;&#3120;&#3136;&#3114;&#3074;&#3098;&#3118;&#3135;"], "type":"oh" },
+		
+		{ "date": "2019-03-04", "note": ["&#3118;&#3129;&#3134;&#3126;&#3135;&#3125;&#3120;&#3134;&#3108;&#3149;&#3120;&#3135;"], "type":"gh" },
+		{ "date": "2019-03-21", "note": ["&#3129;&#3100;&#3134;&#3120;&#3108;&#3149; &#3077;&#3122;&#3135; &#3100;&#3112;&#3149;&#3118;&#3110;&#3135;&#3112;&#3118;&#3137;"], "type":"oh" },
+		
+		{ "date": "2019-04-04", "note": ["&#3127;&#3116;&#3149;-&#3087;-&#3118;&#3135;&#3120;&#3134;&#3100;&#3149;"], "type":"oh" },
+		{ "date": "2019-04-17", "note": ["&#3118;&#3129;&#3134;&#3125;&#3136;&#3120; &#3100;&#3119;&#3074;&#3108;&#3135;"], "type":"oh" },
+		
+  		{ "date": "2019-04-05", "note": ["&#3116;&#3134;&#3116;&#3137; &#3100;&#3095;&#3149;&#3100;&#3136;&#3125;&#3112;&#3149; &#3120;&#3134;&#3074; &#3100;&#3112;&#3149;&#3118;&#3110;&#3135;&#3112;&#3118;&#3137;"], "type":"gh" },
+		{ "date": "2019-04-06", "note": ["&#3081;&#3095;&#3134;&#3110;&#3135;"], "type":"gh" },
+		{ "date": "2019-04-14", "note": ["&#3126;&#3149;&#3120;&#3136; &#3120;&#3134;&#3118; &#3112;&#3125;&#3118;&#3135;/&#3105;&#3134;. &#3116;&#3135;.&#3078;&#3120;&#3149;. &#3077;&#3074;&#3116;&#3143;&#3110;&#3149;&#3093;&#3120;&#3149; &#3100;&#3119;&#3074;&#3108;&#3135;"], "type":"gh" },
+		{ "date": "2019-04-19", "note": ["&#3095;&#3137;&#3105;&#3149; &#3115;&#3149;&#3120;&#3144;&#3105;&#3143; "], "type":"gh" },
+		{ "date": "2019-04-21", "note": ["&#3127;&#3116;&#3149;-&#3087;-&#3116;&#3120;&#3134;&#3108;&#3149; "], "type":"oh" },
+		
+		{ "date": "2019-05-07", "note": ["&#3116;&#3128;&#3125; &#3100;&#3119;&#3074;&#3108;&#3135;"], "type":"oh" },
+		{ "date": "2019-05-18", "note": ["&#3116;&#3137;&#3110;&#3149;&#3111; &#3114;&#3138;&#3120;&#3149;&#3107;&#3135;&#3118;"], "type":"oh" },
+		{ "date": "2019-05-26", "note": ["&#3127;&#3129;&#3134;&#3110;&#3108;&#3149; &#3129;&#3100;&#3120;&#3108;&#3149; &#3077;&#3122;&#3135; "], "type":"oh" },
+		{ "date": "2019-05-31", "note": ["&#3100;&#3137;&#3118;&#3134;&#3108;&#3137;&#3122;&#3149; &#3125;&#3135;&#3110;&#3134;"], "type":"oh" },
+		
+		{ "date": "2019-06-02", "note": ["&#3127;&#3116;&#3149;-&#3087;-&#3094;&#3110;&#3120;&#3149;"], "type":"oh" },
+		{ "date": "2019-06-05", "note": ["&#3120;&#3074;&#3100;&#3134;&#3112;&#3149;"], "type":"gh" },
+		
+		
+		{ "date": "2019-07-04", "note": ["&#3120;&#3109; &#3119;&#3134;&#3108;&#3149;&#3120;"], "type":"oh" },
+		
+		{ "date": "2019-08-09", "note": ["&#3125;&#3120;&#3122;&#3093;&#3149;&#3127;&#3149;&#3118;&#3135; &#3125;&#3149;&#3120;&#3108;&#3074;"], "type":"oh" },
+		{ "date": "2019-08-12", "note": ["&#3116;&#3093;&#3149;&#3120;&#3136;&#3110;&#3149;"], "type":"gh" },
+		{ "date": "2019-08-15", "note": ["&#3128;&#3149;&#3125;&#3134;&#3108;&#3074;&#3108;&#3149;&#3120;&#3149;&#3119; &#3110;&#3135;&#3112;&#3118;&#3137;"], "type":"gh" },
+		{ "date": "2019-08-17", "note": ["&#3114;&#3134;&#3120;&#3149;&#3126;&#3135; &#3128;&#3074;&#3125;&#3108;&#3149;&#3128;&#3120;&#3134;&#3110;&#3135;"], "type":"oh" },
+		{ "date": "2019-08-20", "note": ["&#3080;&#3110;&#3149;-&#3087;-&#3095;&#3110;&#3136;&#3120;&#3149;"], "type":"oh" },
+		{ "date": "2019-08-23", "note": ["&#3126;&#3149;&#3120;&#3136; &#3093;&#3139;&#3127;&#3149;&#3107;&#3134;&#3127;&#3149;&#3103;&#3118;&#3135;"], "type":"gh" },
+		
+		{ "date": "2019-09-02", "note": ["&#3125;&#3135;&#3112;&#3134;&#3119;&#3093; &#3098;&#3108;&#3137;&#3120;&#3149;&#3109;&#3135;"], "type":"gh" },
+		{ "date": "2019-09-09", "note": ["9&#3125; &#3118;&#3146;&#3129;&#3120;&#3149;&#3120;&#3074;"], "type":"oh" },
+		{ "date": "2019-09-10", "note": ["&#3118;&#3146;&#3129;&#3149;&#3129;&#3120;&#3149;&#3120;&#3074;"], "type":"gh" },
+		{ "date": "2019-09-28", "note": ["&#3118;&#3129;&#3134;&#3122;&#3119; &#3077;&#3118;&#3134;&#3125;&#3134;&#3128;&#3149;&#3119;"], "type":"oh" },
+		
+		{ "date": "2019-10-02", "note": ["&#3118;&#3129;&#3134;&#3108;&#3149;&#3118;&#3134; &#3095;&#3134;o&#3111;&#3136; &#3100;&#3119;&#3074;&#3108;&#3135;"], "type":"gh" },
+		{ "date": "2019-10-06", "note": ["&#3110;&#3137;&#3120;&#3149;&#3095;&#3134;&#3127;&#3149;&#3103;&#3118;&#3135;"], "type":"gh" },
+		{ "date": "2019-10-07", "note": ["&#3118;&#3129;&#3120;&#3149;&#3112;&#3125;&#3118;&#3135;"], "type":"oh" },
+		{ "date": "2019-10-08", "note": ["&#3125;&#3135;&#3100;&#3119; &#3110;&#3126;&#3118;&#3135;"], "type":"gh" },
+		{ "date": "2019-10-20", "note": ["&#3077;&#3120;&#3149;&#3116;&#3119;&#3136;&#3112;&#3149;"], "type":"oh" },
+		{ "date": "2019-10-26", "note": ["&#3112;&#3120;&#3093; &#3098;&#3108;&#3137;&#3120;&#3149;&#3110;&#3136;"], "type":"oh" },
+		{ "date": "2019-10-27", "note": ["&#3110;&#3136;&#3114;&#3134;&#3125;&#3123;&#3135;"], "type":"gh" },
+		
+		{ "date": "2019-11-10", "note": ["&#3118;&#3135;&#3122;&#3134;&#3110;&#3137;&#3112;&#3149; &#3112;&#3116;&#3135;"], "type":"gh" },
+		{ "date": "2019-11-12", "note": ["&#3093;&#3134;&#3120;&#3149;&#3108;&#3135;&#3093; &#3114;&#3138;&#3120;&#3149;&#3107;&#3135;&#3118;/&#3095;&#3137;&#3120;&#3137;&#3112;&#3134;&#3112;&#3093;&#3149; &#3100;&#3119;&#3074;&#3108;&#3135;"], "type":"oh" },
+		
+		
+		{ "date": "2019-12-09", "note": ["&#3119;&#3134;&#3100;&#3149;-&#3110;&#3134;&#3129;&#3137;&#3074;-&#3127;&#3120;&#3136;&#3115;&#3149;"], "type":"oh" },
+		{ "date": "2019-12-24", "note": ["&#3093;&#3149;&#3120;&#3135;&#3128;&#3149;&#3103;&#3118;&#3128;&#3149; &#3080;&#3125;&#3149;"], "type":"oh" },
+		{ "date": "2019-12-25", "note": ["&#3093;&#3149;&#3120;&#3135;&#3128;&#3149;&#3118;&#3128;&#3149;"], "type":"gh" },
+		{ "date": "2019-12-26", "note": ["&#3116;&#3134;&#3093;&#3149;&#3128;&#3135;&#3074;&#3095;&#3149; &#3105;&#3143;"], "type":"oh" },
+						
+                		],
+                showNotes: true,
+			});
+            my_calendar.build();
+		});    
+	</script><script src="https://www.gad.ap.gov.in/GAD/++theme++gad/js/dncalendar.min.js">
+</script>
+
+<script src="https://www.gad.ap.gov.in/GAD/++theme++gad/js/bootstrap.min.js"></script>
+<script src="https://www.gad.ap.gov.in/GAD/++theme++gad/js/custom-jqeary.js"></script>
+
+</body>
+</html>

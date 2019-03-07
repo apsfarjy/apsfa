@@ -1,0 +1,1515 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" style="height: 100%;"><head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>AP State Forest Academy</title>
+
+		<!-- Bootstrap -->
+
+<!-- Latest compiled and minified CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/apsfa.css" rel="stylesheet">
+<script src="js/md5.js" type="text/javascript"></script>	
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="css/amCharts/export.css" type="text/css" media="all" />
+<style type="text/css">
+
+/*social icons */
+.fa {
+  padding: 5px;
+  font-size: 25px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+</style>
+
+
+<style type="text/css">
+thover{
+  position:fixed;
+  background:#000;
+  width:100%;
+  height:100%;
+  opacity: .6
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+    /* border: 1px solid rgb(48, 121, 237); */
+    border: 0px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    background-color: rgb(255, 167, 4);
+    padding: 17px 0px;
+    font-family: roboto;
+    font-size: 14px;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(77, 144, 254)), to(rgb(71, 135, 237))); */
+}
+.loginmodal-submit:hover {
+    border: 1px solid rgb(47, 91, 183);
+    border: 0px;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: #52464D;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(77, 144, 254)), to(rgb(53, 122, 232))); */
+}
+
+.loginmodal-container a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+    opacity: 1;
+    transition: opacity ease 0.5s;
+    font-size: 14px;
+} 
+
+.login-help{
+  font-size: 12px;
+}
+
+.login-btn {
+  text-align:center;
+  margin-top: 50px;
+}
+
+.button {
+  line-height: 55px;
+  padding: 0 30px;
+  background: #004a80;
+  color: #fff;
+  display: inline-block;
+  font-family: roboto;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.button:hover,
+.button:visited {
+  background: #006cba;
+  color: #fff;
+}
+#tpopup{
+  position:absolute;
+  width:800px;
+  height:800px;
+  background:#fff;
+  left:45.8%;
+  top:11.2%;
+  border-radius:5px;
+  padding:0px 0;
+  margin-left:-320px; /* width/2 + padding-left */
+  margin-top:-150px; /* height/2 + padding-top */
+  text-align:center;
+  box-shadow:0 0 10px 0 #000;
+ z-index: 99999;
+
+
+}
+#tclose{
+  position:absolute;
+  background:black;
+  color:white;  
+  right:15px;
+  top:55px;
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+  font-size:8px;
+  font-weight:bold;
+  font-family:'Arial Black', Arial, sans-serif;
+  cursor:pointer;
+  box-shadow:0 0 10px 0 #000;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+
+}
+
+
+table, th, td {
+    border: 1px solid green;
+    border-collapse: collapse;
+}
+th {
+    padding: 5px;
+ text-align: center;
+  color: red;
+background-color: #f1f1c1;
+}
+
+td {
+padding: 5px;
+ text-align: left;
+background-color: linen;
+}
+
+table {
+    counter-reset: rowNumber;
+}
+
+table tr:not(:first-child) {
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+</style>
+
+
+
+
+<script type="text/javascript">
+
+function display()
+{
+    var f=document.forms["loginform"];
+    if(f.username.value=="")
+    {
+        alert("Please Enter UserID");
+        f.username.focus();
+        return false;
+    }
+    if(f.password.value=="")
+    {
+        alert("please Enter Password");
+        f.password.focus();
+        return false;
+    }
+//    f.username.value = f.username.value.toUpperCase();
+    f.password.value = hex_md5(f.password.value);
+    return true;
+}
+
+function alertUser()
+		{var text="You are leaving the APSFA and are subject to the privacy and security policies of the owners/sponsors of the outside website. APSFA, does not guarantee the availability of such linked pages at all times. APSFA cannot authorise the use of copyrighted materials contained in linked websites. Users are advised to request such authorisation from the owner of the linked website. APSFA, does not guarantee that linked websites comply with Indian Government Web Guidelines.";
+			if (!confirm(text))
+				return false;
+		}
+
+
+function goBack() {
+  window.history.go(-1);
+}
+
+</script>
+
+</head>
+
+<body>
+<div id="google_translate_element" style="display: none">
+			</div>
+			<script type="text/javascript">
+				function googleTranslateElementInit() {
+					new google.translate.TranslateElement({
+						pageLanguage: 'en', 
+						layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+						autoDisplay: false
+					}, 'google_translate_element');
+				}
+			</script>	
+
+  
+
+<div class="container back">
+<div class="header row">
+<div class="row mb10 mt10">
+<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7  clock"  >										
+<style="border-radius: 0px;
+	background: ;
+	color:White;
+	font-size:1em;
+    font-weight:bold;
+    text-align:center;
+    padding: 0px; 
+    width: 100%;;
+    height: 10px;">
+
+
+
+
+
+<script type="text/javascript">// <![CDATA[
+var d = new Date()
+                        var weekday = new Array("ఆదివారం", "సోమవారం", "మంగళవారం", "బుధవారం", "గురువారం", "శుక్రవారం", "శనివారం")
+                        var monthname = new Array("జనవరి", "ఫిబ్రవరి", "మార్చి", "ఏప్రిల్", "మే", "జూన్", "జూలై", "ఆగస్టు", "సెప్టెంబర్", "అక్టోబర్", "నవంబర్", "డిసెంబర్")
+                        document.write(weekday[d.getDay()] + ", ")
+                        document.write(d.getDate() + " ")
+                        document.write(monthname[d.getMonth()] + ", ")
+                        document.write(d.getFullYear())
+function renderTime() {
+                                var currentTime = new Date();
+                                var diem = "AM";
+                                var h = currentTime.getHours();
+                                var m = currentTime.getMinutes();
+                                var s = currentTime.getSeconds();
+                                setTimeout('renderTime()', 1000);
+                                if (h == 0) {
+                                    h = 12;
+                                } else if (h > 12) {
+                                    h = h - 12;
+                                    diem = "PM";
+                                }
+                                if (h < 10) {
+                                    h = "0" + h;
+                                }
+                                if (m < 10) {
+                                    m = "0" + m;
+                                }
+                                if (s < 10) {
+                                    s = "0" + s;
+                                }
+                                var myClock = document.getElementById('clockDisplay');
+                                myClock.textContent = "Now" + h + ":" + m + ":" + s + " " + diem;
+                                myClock.innerText = "APSFA Time: " + h + ":" + m + ":" + s + " " + diem;
+                            }
+                            renderTime();
+// ]]></script>
+
+<span id="clockDisplay">
+
+</div>	
+											 
+  <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 translate text-right ">
+<a href="https://www.apsfarjy.com/trainee-login">Registration</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.apsfarjy.com/contact-us"> Contact Us</a>
+								 </div></div></div>
+							
+
+					
+<div class="site-header">
+	 <div class="row">
+	 										
+<div class="col-md-8 col-sm-6 col-xs-12 center">
+	<h1><img  class="center" src="https://static.wixstatic.com/media/8e451e_b2b27527717946fab844c1e41fc9d619~mv2.png" width="100%" alt="APSFA-Title" class="img-responsive"/> </h1>
+                            </div>							
+					
+					</div></div>
+
+
+
+
+<div class="row mt10">
+<div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" style="padding:0px;">
+<header id="header">
+
+<nav class="navbar navbar-inverse navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>                        
+ </button>
+												  
+</div>
+												
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+<li><a href="Index.html">Home</a></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Administration<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="Board of Control.html">Board of Control</a></li>
+<li><a href="director.html">Director</a></li>
+<li><a href="Course Director.html">Course Directors</a></li>
+</ul>
+</li>							
+
+
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About us<span class="caret"></span></a><ul class="dropdown-menu">
+<li><a href="apsfa-logo.html">LOGO</a></li>
+<li><a href="academy-profile.html">Academy Profile</a></li>
+<li><a href="news-clips.html">News Clips</a></li>
+<li><a href="gallary.html">gallary</a></li>
+ </ul>
+</li>							
+
+<li><a href="vana-samrakshini.html"> News Letter</a></li>
+
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Acadamics<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="registration-form.html">Registration</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+<li><a href="faculty.html">Faculty</a></li>
+<li><a href="syllabus.html">Syllabus</a></li>
+<li><a href="gclassroom.html">Google Class</a></li>
+</ul>
+</li>				
+
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Facilities<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="hostel.html">Hostel</a></li>
+<li><a href="library.html">Library</a></li>
+<li><a href="computer-lab.html">Computer Lab</a></li>
+<li><a href="digital-library.html">Digital Library</a></li>
+<li><a href="gym.html">Gym</a></li>
+</ul>
+</li>	
+
+
+</div>
+</div>
+</nav>
+</div></div></div>
+
+
+
+	
+	<div class="container">
+		 <div class="row message-box">
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 message-box-title  visible-md visible-lg" style="padding:0px;margin:0px;">
+						<span>LIVE UPADTES</span>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 " style="padding:0px;margin:0px;">
+						<div class="message-box-right"><marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"scrolldelay="100">
+
+<!-- <span class="blink" style="color:#fff;">
+<img src="https://www.apfinance.gov.in/images/new.gif" border="0"> &nbsp;All India National Forest Sports meet coaching camp from 23-12-2018 to 30-12-2018 at A.P.State Forest Academy, Rajamahendravaram </span> <a href ="https://drive.google.com/file/d/0B9NnnD6wKWXSODBQTk0tX25SWVo1aHRweFJ6b2UtZGl6ekFN/view" target="_blank" style="color:#ffc761;font-weight: bold;">LIST OF PARTICIPANTS</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;						
+						<!-- <a  href="#" style="color:#fff;">	&#3125;&#3143;&#3108;&#3112; &#3128;&#3125;&#3120;&#3107; 
+
+&#3128;&#3074;&#3096;&#3074; &#3093;&#3118;&#3136;&#3127;&#3112;&#3120;&#3149; &#3125;&#3134;&#3120;&#3135; &#3093;&#3134;&#3120;&#3149;&#3119;&#3134;&#3122;&#3119;&#3074; &#49;&#56;&#55; 
+
+&#3112;&#3134;&#3122;&#3149;&#3095;&#3125; &#3117;&#3125;&#3112;&#3074; &#3128;&#3098;&#3135;&#3125;&#3134;&#3122;&#3119;&#3074; &#3125;&#3142;&#3122;&#3095;&#3114;&#3138;&#3105;&#3135; 
+
+&#3077;&#3118;&#3120;&#3134;&#3125;&#3108;&#3135; &nbsp;<img src="images/new.gif" border="0"></a> -->
+						
+ <p><a href="https://drive.google.com/file/d/0B9NnnD6wKWXSODBQTk0tX25SWVo1aHRweFJ6b2UtZGl6ekFN/view" target="new" style="color: #fff">&nbsp;All India National Forest Sports meet coaching camp from 23-12-2018 to 30-12-2018 at A.P.State Forest Academy, Rajamahendravaram  &nbsp;<a href ="https://drive.google.com/file/d/0B9NnnD6wKWXSODBQTk0tX25SWVo1aHRweFJ6b2UtZGl6ekFN/view" target="new" style="color:#ffc761;font-weight: bold;">LIST OF PARTICIPANTS</a> </p>
+					
+<!--  <p><a href="downloads/prc_paper_31_08_2018.pdf" target="new" style="color: #fff">Last Date For Submisson of Representations  to PRC is 
+
+20.09.2018.&nbsp;<img src="images/new.gif" border="0"></a> </p> -->
+						 
+						 </marquee>
+						</div>
+				</div>
+			</div>
+		 </div>
+</header><!--/#HEADER-->
+
+<!-- ============================================================= Page info ==================================================-->		 
+
+<div class="container">
+
+<form method="post">
+                <b><a style="float: right; margin-right: 100px;" href="javascript:history.go(-1)"><font
+                        size="4" color="Red"><button type="button">Back </font> </button></a></b><font></form>
+
+<h2 class="heading">     
+	Digital Library</h2> 
+
+<table style="width:100%">
+
+<tbody> 
+    <th>Sl. no.</th>
+    <th>Bare Acts, Rules & Guidelines</th> 
+    <th>Download</th>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Forest Act & Rules translated in-తెలుగు</font></b></font></div></td>
+   <td><div align="center"> <a target="_blank" href="https://ia601507.us.archive.org/33/items/FORESTSACTSRULES/FORESTS%20ACTS%20%26%20RULES.pdf">
+Click Here</td></a></div>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">A.P. Forest Act 1967-తెలుగు</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://drive.google.com/open?id=0B2X8BUvG-fYRMHhRTGZLZTAtNWs">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Wildlife Protection Act 1972-తెలుగు</font></b></font></div></td>
+   <td><div align="center"> <a target="_blank" href="https://drive.google.com/open?id=0BxsvBy_5nXQqMkVCbXdhcHVVX0U">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Forest Conservation Act 1980-with latest ammendments</font></b></font></div></td>
+   <td><div align="center"> <a target="_blank" href="https://drive.google.com/open?id=0B2X8BUvG-fYRVFZ4TGhFaTNyS2M">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">A.P.Forest Conservation (Ammendment) Act 2016with latest ammendments</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://drive.google.com/open?id=0B2X8BUvG-fYRVFZ4TGhFaTNyS2M">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">The Indian Forest Act, 1927</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzWFNiN1NmVEE5WDQ/edit">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Forest Conservation Act, 1980</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzWmp6Q0otMW5VNzA/edit">Click Here</td></a>
+   </div></tr>
+
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Biological Diversity Act, 2002</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzeUwycUczbUNoOUk/edit">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Biological Diversity Rules, 2004</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="http://nbaindia.org/uploaded/Biodiversityindia/Legal/33.%20Biological%20Diversity%20Rules,%202004.pdf">Click Here</td></a></div>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">National Forest Policy,1988</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="http://www.moef.gov.in/sites/default/files/introduction-nfp.pdf">Click Here</td></a></div>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">National Forest Policy,1998</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzSi1CR3FBbjFIM28/edit">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">National Green Tribunal Act,2010</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzSi1CR3FBbjFIM28/edit">Click Here</td></a>
+   </div></tr>
+
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Wildlife Protection Act, 1972</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzWlJ0LUFYNkhMbmM/edit">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Wildlife Protection (AMENDMENT) Act, 2006</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzT081NUhxam9WSVE/edit">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzZzM0NGN5dFVfUnM/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">EIA Notification, 2006</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzOXFqSnNJVWFoZVU/edit">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Right to Information Act, 2005</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzdHhUTmVqMWFUTGs/edit">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">The State Emblem of India (Prohibition of Improper Use) Act, 2005</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzbVFjVlhkRVVPVkU/edit">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">The State Emblem of India (Regulation of Use) Rules, 2007</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzNG14ZjFnVVl3VTQ/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Guidelines on Ecotourism in around Protected Areas</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzbERtdFZfWE40eFE/edit">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Guidelines on State CAMPA</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzWFBQbkhMX3FJRW8/edit">Click Here</td></a>
+   </div></tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Compendium_on_Forest Conservation Act</font></b></font></div></td>
+   <td> <div align="center"><a target="_blank" href="https://docs.google.com/file/d/0B2X8BUvG-fYRVFZ4TGhFaTNyS2M/edit">Click Here</td></a>
+   </div></tr>
+
+</tbody>
+<tbody> 
+    <th colspan="3">
+    BOOKS
+    </th>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">INDIA'S GREEN BOOK: WII</font></b></font></div></td>
+   <td> <a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzUDhVM0JKRExBWnM/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Silviculture of Indian Trees : Volume I</font></b></font></div></td>
+   <td> <a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzV09RdTVBN3paa2c/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Silviculture of Indian Trees : Volume II</font></b></font></div></td>
+   <td> <a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzUGFLSGhZVGpBS0k/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Silviculture of Indian Trees : Volume III</font></b></font></div></td>
+   <td> <a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzV09RdTVBN3paa2c/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Invasive Plants of India</font></b></font></div></td>
+   <td> <a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzaTVWUGd5WkRBODg/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Manual of Wildlife Species in India</font></b></font></div></td>
+   <td> <a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzYzUwUUMtWlRDanc/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Identification Guide of Indian Wildlife </font></b></font></div></td>
+   <td> <a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzYXh3a0VpVW5hTk0/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Critically Endangered Animal Species of India</font></b></font></div></td>
+   <td> <a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzaW44ZVRjMWEwN3c/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">Lens of Deep Ecology - Chris Johnstone</font></b></font></div></td>
+   <td> <a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzcHNFclN6YlhJYmc/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td>
+   <td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Special  Habitats And Threatened Plants of india</font></b></font></div></td>
+   <td> <a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzMVlnWXR1MFpKYzg/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Understanding Forest Fires
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzZ2wzREhfWTh2SWc/edit">Click Here</td></a>
+   </tr>
+
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+India's  Forests And The Judiciary
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzRmtDMVI5OVZKSGc/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Manual of  Instructions for Field Inventory: FSI
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzUXFIQS0tdDlybms/edit">Click Here</td></a>
+   </tr>
+
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+How  Communities Manage Forests: Global  Examples
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzcXlkUndOTWtLaUE/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Forest  Cover Mapping
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzRkdrZkZzOVdPbVk/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Organising Self  Help Groups
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzVC1HTHNkSmtUVVk/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Communication  Methods and Public Awareness Raising
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzQWpoM2huZzhZbW8/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Office  Management
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzU2FtX0p1ekVNcGc/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Bird Watching  Guide
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzZE55X2tvaDJ3SDQ/edit">Click Here</td></a>
+   </tr>
+
+</tbody>
+<tbody> 
+   <th colspan="3">
+   DOCUMENTS</th> 
+    
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+PIL NO.87 OF 2006 on DESTRUCTED MANGROOVE AREAS
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://ia601500.us.archive.org/21/items/PILOnDestructionOfMangrooveAreas/PIL%20on%20destruction%20of%20Mangroove%20areas.pdf">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+India And  Climate Change
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzbEhSbTNiRlZxNHc/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Protected  Area Network In India
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzbEhSbTNiRlZxNHc/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Forestry  Institutions In India
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzSWI5SjZ3SmNiYTQ/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+National  Biodiversity Action Plan
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzTHhtSkhCX1p5NHc/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Guidleines  on Biodiversity Management Committees (BMC's)
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzUll0Q2RZRXRwcWc/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+A Model  State Biodiversity Action Plan -  Karnataka
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzN0FFUDBsR05IRGM/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Biodiversity: A Natural Way Out of  Poverty
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzQkRsTzRSSlk4RWs/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Methodology Manual For People's  Biodiversity Register
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzNUhQUWw4UHdPZkU/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Community Conserved Areas In India
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzVVhPakVkSy0zTHc/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Gender Issues Amongst Frontline Forest Staff
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzS1FxRjRGT1J0djg/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Eco  Certification of NTFP's
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzRDA2TXItdlpQQ3M/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Understanding Clean Development Mechanism
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzVWR1c1RUSDR1dkk/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Unlocking  Opportunities For Forest Dependent  People
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzT24xWlhPRTRLZlE/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Natural Resource Management Manual
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzMkxQT0JqN2NIbzg/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Human Wildlife Conflicts Worldwide: Case  Studies
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzUzdLR1dBbHVnUEk/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Understanding E-Office
+</font></b></font></div></td> 
+<td>
+<a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzWWJJRFNsa0lyYkU/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+E-Governance and Best Practices In India
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzRG0waU12aGE1QzA/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Model Community Ecotorism: Great Himalayan National Park
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzWjhrbFppbVhxRlU/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Forest  Fire Management System - Madhya  Pradesh
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzTEZBNFk2Ym1iV1E/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+GIS In  Forestry - Karnataka Experience
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzTTU2dlpJdlpyZlE/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+A Sample  Forest Works Manual - Uttarakhand
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzRHRxSndHLWtKYUE/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Eco  Friendly Lifestyles
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzSV90dUpjcVFNZ2M/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Sustainable Forest Management: The  Himachal Example
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzUXFIQS0tdDlybms/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Impact of  JFM: Chattisgarh Study
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzTmd5eW13ZkEyVFE/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Field Manual For Cane Propagation
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzVm1PTHZrRy1aeXM/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Nursery  Techniques of Local Tree Species
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzbkZGQ3BTMDFkNFk/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Nursery  Techniques of Local Tree Species II
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzVER5aTlweVhpckE/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Community Participation in Forest Management
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzX1dMY0NOVUJDMkE/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Forms of  Correspondences
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzZUZ5UFozVnF5bkU/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Written  Communication In Government Offices
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzbGF2QXpTODUxcFk/edit">Click Here</td></a>
+   </tr>
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Guidelines on Eco Sensitive Zones Around PA's
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzaWV3LWp3ODZsaVE/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+National Working Plan Code
+</font></b></font></div></td> 
+<td><a target="_blank" href="http://envfor.nic.in/sites/default/files/National%20Working%20Plan%20Code%202014.pdf">Click Here</td></a>
+   </tr>
+
+</tbody>
+<tbody> 
+  <th colspan="3">
+    ARTICLES</th> 
+    
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+The Future of  Biodiversity
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzRVpQM0dMTlB3dXc/edit">Click Here</td></a>
+   </tr>
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Ecotourism and its Effects - Chattisgarh Example
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzNkZBTDRLSWdkeEU/edit">Click Here</td></a>
+   </tr>
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Ecotourism and its Effects - Pachmarhi Example
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzS2t2UmE2a21QSXM/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Ecotourism and  Environmental Sustainability in India
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzWWJ4M1RReVZ5RFU/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Water Resources of India
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzOTlib08zVzdMMVk/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Forest Fire Zonation Mapping Exercise - Andhra Pradesh
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzakVBN3NXcDFVTG8/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Forest Fires and Community Participation
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzZklPSE50dWtaRms/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Supreme Court and  India's Forests
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzeS1OOXZJNWhzcDQ/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Developing  Medicinal Plants Sector
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzUzd2N1BybHV3UUk/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Vegetative  Propagation of Major Tree Species
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzYUlIdkF6dkVVZE0/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Traditional Knowledge and Natural Resource Management
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzV19ZR3c4Mk1GNG8/edit">Click Here</td></a>
+   </tr>
+
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Potential of Sacred Groves
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzRzNrSUctV2hkb3M/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Public Procurement  - A Reference Paper
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzS2pack1OTEJJaEE/edit">Click Here</td></a>
+   </tr>
+
+<tr> <td style="color: blue; text-align: center;><div align="center"><b> </b></td> 
+<td align="left" valign="middle"><div align="left"><font color="#0000FF"><b><font color="#0000FF">
+Counting Birds:  Methodologies
+</font></b></font></div></td> 
+<td><a target="_blank" href="https://docs.google.com/file/d/0ByjlyivLLVNzZE55X2tvaDJ3SDQ/edit">Click Here</td></a>
+   </tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+						
+					
+				
+<!-- ============================================================= Page info ==================================================-->
+		   
+		   
+<!-- ============================================================= FOOTER ==================================================-->
+
+<footer id="footer" class="footer color-bg">
+	<div class="footer-bottom inner-bottom-sm">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading outer-bottom-xs">
+                     <h4 class="module-title">ABOUT US</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li><a href="#">Academy Profile</a></li>
+                            <li><a href="#">LOGO</a></li>
+                            <li><a href="#">Photo Gallery</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">ADMINISTRATION</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li><a href="#">Board of Control</a></li>
+                            <li><a href="#">Director</a></li>
+                            <li><a href="#">Course Directors</a></li>
+                            
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">ACADEMICS</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+                            <li><a href="#">Registration</a></li>
+                            <li><a href="#">Faculty</a></li>
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="#">Google Classroom</a></li>
+                            
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div>
+				
+				
+				 <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">FACILITIES</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class='list-unstyled'>
+			<li><a href="#" target="_balnk">HOSTEL</a></li>
+			<li><a href="#" target="_balnk">COMPUTER LAB</a></li>
+                         <li><a href="#">LIBRARY</a></li>
+                          <li><a href="#">DIGITAL LIBRARY</a></li>
+			<li><a href="#">GYM</a></li>
+                           
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+				
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright-bar">
+        <div class="container">
+            
+<div class="" style="padding:2px;"><div class="col-sm-12 col-xs-12 col-md-9 col-lg-9">
+                <div class="copyright">
+                   Copyright © 2018
+                    <a href="https://www.apsfarjy.com/">A.P.State Forest Academy</a>
+                    - All rights Reserved
+
+<div style="width:200px; float:right">
+  <a href="https://www.facebook.com/apsfa18" class="fa fa-facebook" target="blank"></a>
+  <a href="https://twitter.com/apsfarjy " class="fa fa-twitter" target="blank"></a>
+  <a href="https://plus.google.com/112228901449831546272" class="fa fa-google" target="blank"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+  <a href="#" class="fa fa-youtube"></a>
+  </div>
+  <div style="clear:both"></div>
+  </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+
+</footer>
+<!-- ============================================================= FOOTER : END============================================================= -->		   	
+
+
+
+
+
+
+<div class="modal fade" id="login-modal" tabindex="-1" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container" "="">
+					<div style="background: #7a7075;padding: 10px;color: #ffffff;margin-bottom: 20px;"><h1>LOGIN</h1></div>
+				    <form name="loginform" id="loginform" method="post" action="Login.do" onsubmit="return display()">
+      
+        <input type="hidden" name="source" value="web">
+        
+        
+  
+			       <div style="width: 100%;	text-align: center;">
+       
+					        <font size="4" color="red">
+											</font>
+											
+						</div>	
+<input id="username" type="text" name="username" maxlength="40" size="13" placeholder="Username" autofocus="" required="">
+<input id="password" type="password" name="password" maxlength="50" size="13" placeholder="Password" required="">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+					
+				  </form>
+					
+				  <div class="login-help">
+					 <span style="float: right; color:#000;"> <a href="FirstPage.do?status=forgot" class="forgot_password">Unable to Access?</a></span>
+				  </div>
+				</div>
+			</div>
+		  </div>
+
+
+		 
+		 
+
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>	
+<script src="js/translate.js" type="text/javascript"></script>          
+		 
+
+
+<script>
+	function openCity(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+	</script>
+	<script>
+	 
+				function translateLanguage(lang) 
+				{
+
+					var $frame = $('.goog-te-menu-frame:first');
+					if (!$frame.size()) {
+						alert("Error: Could not find Google translate frame.");
+						return false;
+					}
+					$frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+					return false;
+				}
+
+	</script>
+
+
+	<script src="js/amCharts/amcharts.js" type="text/javascript"></script>
+			<script src="js/amCharts/serial.js" type="text/javascript"></script>
+			<script src="js/amCharts/pie.js"></script>
+			<script src="js/amCharts/export.min.js"></script>
+			<script src="js/amCharts/light.js"></script>
+			<script src="js/animate.min.js"></script>
+	 <script src="js/jquery.newsTicker.js"></script>
+	<script src="js/jquery.slimscroll.js"></script>
+	<script>
+		$(function(){
+		
+
+	   
+		  
+		  $('#testDiv2').slimScroll({
+		   color: '#253f60',
+			  alwaysVisible: true
+		  });
+
+
+
+
+		});
+		</script>
+		 
+		
+		<script>
+	var chart = AmCharts.makeChart("chartdiv", {
+		"theme": "light",
+		"type": "serial",
+		"startDuration": 2,
+		"dataProvider": [{
+			"country": "Economic",
+			"visits": 67830.19,
+			"color": "#52464d"
+		},  {
+			"country": "Social",
+			"visits": 67120.25,
+			"color": "#f8ab1f"
+		},
+		 {
+			"country": "General",
+			"visits": 56113.17,
+			"color": "#f8ab1f"
+		}
+		],
+		"valueAxes": [{
+			"position": "left",
+			"axisAlpha":0,
+			"gridAlpha":0
+		}],
+		"valueAxes": [{
+			"position": "left",
+			"title": "Rupees In Cr"
+		}],
+		"graphs": [{
+			"balloonText": "[[category]]: <b>[[value]]</b>",
+			"colorField": "color",
+			"fillAlphas": 0.85,
+			"lineAlpha": 0.1,
+			"type": "column",
+			"topRadius":1,
+			"valueField": "visits"
+		}],
+		
+		"depth3D": 30,
+		"angle":30,
+		"chartCursor": {
+			"categoryBalloonEnabled": false,
+			"cursorAlpha": 0,
+			"zoomable": false
+		},
+		"categoryField": "country",
+		"categoryAxis": {
+			"gridPosition": "start",
+			"axisAlpha":0,
+			"gridAlpha":0
+
+		},
+		"export": {
+			"enabled": true
+		 }
+
+	}, 0);
+		</script>
+	<!-- Chart code -->
+
+	<script>
+	var chart = AmCharts.makeChart("chartdiv2", {
+		"theme": "light",
+		"type": "serial",
+		"startDuration": 2,
+		"dataProvider": [{
+			"country": "Receipts",
+			"visits": 191063.61,
+			"color": "#52464d"
+		}, {
+			"country": "Expenditure",
+			"visits": 191059.72,
+			"color": "#f8ab1f"
+		} ],
+		"valueAxes": [{
+			"position": "left",
+			"title": "Rupees In Cr"
+		}],
+		"graphs": [{
+			"balloonText": "[[category]]: <b>[[value]]</b>",
+			"fillColorsField": "color",
+			"fillAlphas": 1,
+			"lineAlpha": 0.1,
+			"type": "column",
+			"valueField": "visits"
+		}],
+		"depth3D": 30,
+		"angle": 30,
+		"chartCursor": {
+			"categoryBalloonEnabled": false,
+			"cursorAlpha": 0,
+			"zoomable": false
+		},
+		"categoryField": "country",
+		"categoryAxis": {
+			"gridPosition": "start",
+			"labelRotation": 0
+		},
+		"export": {
+			"enabled": true
+		 }
+
+	});
+	</script>
+	<script>
+	var chart = AmCharts.makeChart( "chartdiv3", {
+	  "type": "pie",
+	  "theme": "light",
+	  "dataProvider": [ {
+		"country": "Lithuania",
+		"litres": 501.9
+	  }, {
+		"country": "Czech Republic",
+		"litres": 301.9
+	  }],
+	  "valueField": "litres",
+	  "titleField": "country",
+	   "balloon":{
+	   "fixedPosition":true
+	  },
+	  "export": {
+		"enabled": true
+	  }
+	} );
+	</script>
+<script>
+		$(function(){
+		
+
+	   
+		  
+		  $('#testDiv2').slimScroll({
+		   color: '#253f60',
+			  alwaysVisible: true
+		  });
+
+
+
+
+		});
+		
+		$(document).ready(function () {
+
+    $('#memberModal1').modal('show');
+	 
+
+});
+		</script>
+		 
+
+
+	 <script>
+			
+				var nt_example1 = $('#nt-example1').newsTicker({
+					row_height: 80,
+					max_rows: 3,
+					duration: 4000,
+					prevButton: $('#nt-example1-prev'),
+					nextButton: $('#nt-example1-next')
+				});
+				
+			</script>
+			<script>
+function blink_text() {
+    $('.blink').fadeOut(500);
+    $('.blink').fadeIn(500);
+}
+setInterval(blink_text, 1000);
+</script>
+			
+	  </body>
+		
+	</html> 	
